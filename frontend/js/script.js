@@ -94,7 +94,7 @@ const handleLogin = (event) => {
 
 
     //CRIANDO UMA CONEXÃO COM SERVIDOR 
-    websocket = new WebSocket("ws://localhost:4000")
+    websocket = new WebSocket("wss://chat-backend-oxsj.onrender.com")
     websocket.onmessage = processMessage
 
 };
