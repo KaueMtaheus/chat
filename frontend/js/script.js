@@ -11,6 +11,7 @@ const chatInput = document.querySelector(".chat__input");
 
 
 
+//VARIAVEL DE CORES GERADAS
 const colors = [
     "cadetblue",
     "darkgoldenrod",
@@ -20,14 +21,18 @@ const colors = [
     "gold"
 ]
 
+const user = { id: "", name: "", color: "" };
+
+
+let websocket
+
+
+//FUNÇÃO PARA MUDAR COR ALEATORIA
 const getRandomColor = () => {
     const randomIndex = Math.floor(Math.random() * colors.length);
     return colors[randomIndex];
 }
 
-
-
-const user = { id: "", name: "", color: "" };
 
 const handleSubmit = (event) => {
     event.preventDefault();
@@ -38,6 +43,14 @@ const handleSubmit = (event) => {
 
     login.style.display = "none"
     chat.style.display = "flex"
+
+
+    //CRIANDO UMA CONEXÃO COM SERVIDOR 
+    websocket = new WebSocket("ws://localhost:4000")
+
+    websocket.onopen = () => websocket.send(`Usuário: ${user.name} entrou no chat!`)
+ 
+
 
     console.log(user)
 };
