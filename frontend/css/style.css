@@ -27,11 +27,11 @@ body {
 .login {
     width: 100%;
     max-width: 330px;
-    background-color: #0184f78a;
+    background-color: #0184f7;
     border-radius: 5px;
     padding: 20px;
     box-shadow: 2px 2px 7px 0px #00000053;
-    display: none;
+  
 }
 
 .login > h2 {
@@ -76,4 +76,93 @@ body {
 
 .login__button:hover {
     background-color: #ffffffb1;
+}
+
+/*__________CHAT______________*/
+
+.chat {
+    width: 100%;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.chat__messages {
+    flex-grow: 1;
+    padding: 30px 30px 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.chat__form {
+    background-color: #0184f7;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 2px 2px 7px 0px #00000053;
+}
+
+.chat__input {
+    border: none;
+    padding: 15px;
+    border-radius: 8px;
+    flex-grow: 1;
+    background-color:  #ffffff;
+    outline: none;
+    color: black;
+    font-size: 1rem;
+}
+
+.chat__button {
+    border: none;
+    background: none;
+    color:  #ffffff;
+    cursor: pointer;
+}
+
+.chat__button > span {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+.chat__messages > div {
+    padding: 10px;
+    width: 100%;
+    max-width: 250px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 15px;
+    line-height: 22px;
+}
+
+.message--self {
+    background-color: #0184f7;
+    color: white;
+    border-radius: 10px 10px 0px 10px;
+    align-self: flex-end;
+    box-shadow: 2px 2px 7px 0px #00000053;
+
+}
+
+.message--other {
+    background-color: white;
+    color: black;
+    border-radius: 0px 10px 10px 10px;
+    box-shadow: 2px 2px 7px 0px #00000053;
+    align-self: flex-start;
+}
+
+.message--sender {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: rgb(12, 77, 133)
 }
