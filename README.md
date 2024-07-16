@@ -55,25 +55,32 @@ Este arquivo contém o código do backend, responsável por gerenciar as conexõ
 
   ## Passos
 
-- Clone o repositório:
+    
 
+- Clone o repositório:
+```bash
  git clone https://github.com/KaueMtaheus/chat-online.git
+ ```
 
 - Navegue até o diretório do projeto:
-
+```bash
  cd chat-online
+ ```
 
 - Instale as dependências:
-
+```bash
  npm install
+  ```
 
 - Crie um arquivo .env na raiz do projeto e defina a porta (opcional):
-
+```bash
  PORT=4000
+```
 
 - Inicie o servidor:
-
- node server.js
+```bash
+ node server.js   
+```
 
 Abra o arquivo index.html no seu navegador para visualizar o frontend.
 
